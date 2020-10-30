@@ -659,7 +659,8 @@ server <- function(input, output) {
     }
     
     
-    datatable(data, options = list(autoWidth = TRUE,
+    datatable(data, options = list(language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/French.json'),
+                                   autoWidth = TRUE,
                                    scrollX=TRUE,
                                    
                                    columnDefs = list(
@@ -702,7 +703,8 @@ server <- function(input, output) {
               
               escape = FALSE,
               rownames= FALSE,
-              options = list( autoWidth = FALSE,
+              options = list( language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/French.json'),
+                              autoWidth = FALSE,
                               scrollX=TRUE,
                               pageLength = 20,
                               columnDefs = list(list(targets=c(1), visible=TRUE, width = '32%'),
