@@ -510,24 +510,22 @@ ui <- fluidPage(tweaks,
                              column(6, offset = 3,
                                     helpText(p(style="text-align: justify;",
                                                
-                                               h4("If you've come across literature, web articles, or videos created by a Black urbanist, 
-                                                        activist or planner, you can use our form to add to the guide:"))))),
+                                               h4("Si vous êtes tombé sur des écrits acaémiques, des articles web ou des vidéos créés par un urbaniste, un activiste ou un urbaniste noir, vous pouvez utiliser notre formulaire pour ajouter au guide:"))))),
                            
                            fluidRow(column(6, offset = 3,  align= "center",
-                                           a(h4("ADD TO THE GUIDE", class = "btn btn-default btn-lg action-button" , ), target = "_blank",
+                                           a(h4("AJOUTER AU GUIDE", class = "btn btn-default btn-lg action-button" , ), target = "_blank",
                                              href = "https://forms.gle/ZXuqpaCmrXLDZWRs9")
                            )),                       
                            br(),  
                            fluidRow(
                              column(6, offset = 3,
                                     helpText(p(style="text-align: justify;",
-                                               h4("BVOTC's respository of urban-themed black perspectives
-                                                        is 100% crowdsourced and we welcome all suggestions that match the criteria on the How to Use page."),
-                                               h4("If you'd like to add a Black-led urbanist organization or general media source (e.g. blog, podcast, Twitter account, resource list) to the More Resources page, please use this form: "))))),
+                                               h4("Cet inventaire (non-exhaustif)de perspectives noires sur le thème de l'urbanisme est à 100 % crowdsourced [créé par des collaborateurs bénévoles] et nous accueillons toutes les suggestions qui correspondent aux critères de la page « Mode d'emploi »."),
+                                               h4("Si vous souhaitez ajouter une organisation d'urbanistes dirigée par des personnes Noires ou une source médiatique générale (par exemple un blog, un balado, un compte Twitter, une liste de ressources) à la page « Autres ressources », veuillez utiliser ce formulaire:"))))),
                            
                            fluidRow(column(6, offset = 3,  align= "center",
                                            
-                                           a(h4("ADD TO 'MORE RESOURCES' PAGE", class = "btn btn-default btn-lg action-button" , ), target = "_blank",
+                                           a(h4("AJOUTER À LA PAGE « AUTRES RESSOURCES »", class = "btn btn-default btn-lg action-button" , ), target = "_blank",
                                              href = "https://forms.gle/shRv5DrPB2NqNbAV8")
                            )), 
                            
@@ -537,7 +535,7 @@ ui <- fluidPage(tweaks,
                              column(6, offset = 3,
                                     helpText(p(style="text-align: justify;",
                                                
-                                               h4("To report any broken links or corrections, let us know how we can improve BVOTC, or collaborate and join the team, please email us at", tags$a(href = "mailto: bvotc.guide@gmail.com,", "bvotc.guide@gmail.com"), "or reach out on",  tags$a(href = "https://www.instagram.com/blackvoicesonthecity/", "Instagram"), "or",
+                                               h4("Pour signaler tout lien brisé, nous faire savoir comment nous pouvons améliorer le guide, ou encore pour collaborer ou rejoindre l'équipe, veuillez nous envoyer un courriel à ", tags$a(href = "mailto: bvotc.guide@gmail.com,", "bvotc.guide@gmail.com"), "ou nous contacter sur",  tags$a(href = "https://www.instagram.com/blackvoicesonthecity/", "Instagram"), "ou",
                                                   tags$a(href = "https://twitter.com/bvotcguide", "Twitter.")),
                                                br(), br()
                                     ) )))
