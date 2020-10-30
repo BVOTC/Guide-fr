@@ -247,16 +247,12 @@ ui <- fluidPage(tweaks,
                                       
                                       h5(checkboxGroupInput(inputId = "type",
                                                             label = h3("Type de ressources"),
-                                                            choices = c("Livre",  "Article académique",
+                                                            choices = c("Tous", "Livre",  "Article académique", 
                                                                         "Rapport", "Thèse",
                                                                         "Article d'actualité", "Ressource en ligne", 
                                                                         "Balado", "Vidéo",
                                                                         "Multimédia / Autre" ),
-                                                            selected = c("Livre",  "Article académique",
-                                                                         "Rapport", "Thèse",
-                                                                         "Article d'actualité", "Ressource en ligne", 
-                                                                         "Balado", "Vidéo",
-                                                                         "Multimédia / Autre" ),
+                                                            selected = "Tous" ,
                                                             inline = T)),
                                       
                                       h5( chooseSliderSkin(
@@ -600,11 +596,60 @@ server <- function(input, output) {
   
   output$table <- DT::renderDataTable({
     
-    validate(
-      need(input$location != "", "Veuillez sélectionner une région."
-      ))
+    validate( need(input$location != "", "Veuillez sélectionner une région." ))
     
-    if (input$location == "Tous" ){
+    validate( need(input$type != "", "Veuillez sélectionner un format de média." ))
+    
+    if (input$location == "Tous" & input$type == "Tous" ){
+      data <- data %>%
+        filter(`Tous` %in% input$keyword |
+                 `Architecture et design urbain` %in% input$keyword |
+                 `Cartographie et SIG` %in% input$keyword |
+                 `Crime, police et surveillance` %in% input$keyword |
+                 `Culture, “placemaking” et géographies noires` %in% input$keyword |
+                 `Développement et embourgeoisement` %in% input$keyword |
+                 `Durabilité, environnement et santé` %in% input$keyword |
+                 `Espaces publics et parcs` %in% input$keyword |
+                 `Histoire urbaine` %in% input$keyword |
+                 `Logement social et coopératives` %in% input$keyword |
+                 `Organisation communautaire et participation publique` %in% input$keyword |
+                 `Perspectives noires sur la pratique et l’éducation en urbanisme` %in% input$keyword |
+                 `Politique municipale et gouvernance` %in% input$keyword |
+                 `Politiques territoriales, propriété et colonialisme` %in% input$keyword |
+                 `Race et justice sociale` %in% input$keyword |
+                 `Ségrégation et “redlining”` %in% input$keyword |
+                 `Transport et mobilité` %in% input$keyword |
+                 `Urbanisme féministe et queer` %in% input$keyword,
+           #    item_format_2 %in% input$type,
+               Langue %in% input$language,
+               Année >= input$years[1] & Année <= input$years[2])}
+    
+    else if (input$location != "Tous" & input$type == "Tous" ){
+      data <- data %>%
+        filter(`Tous` %in% input$keyword |
+                 `Architecture et design urbain` %in% input$keyword |
+                 `Cartographie et SIG` %in% input$keyword |
+                 `Crime, police et surveillance` %in% input$keyword |
+                 `Culture, “placemaking” et géographies noires` %in% input$keyword |
+                 `Développement et embourgeoisement` %in% input$keyword |
+                 `Durabilité, environnement et santé` %in% input$keyword |
+                 `Espaces publics et parcs` %in% input$keyword |
+                 `Histoire urbaine` %in% input$keyword |
+                 `Logement social et coopératives` %in% input$keyword |
+                 `Organisation communautaire et participation publique` %in% input$keyword |
+                 `Perspectives noires sur la pratique et l’éducation en urbanisme` %in% input$keyword |
+                 `Politique municipale et gouvernance` %in% input$keyword |
+                 `Politiques territoriales, propriété et colonialisme` %in% input$keyword |
+                 `Race et justice sociale` %in% input$keyword |
+                 `Ségrégation et “redlining”` %in% input$keyword |
+                 `Transport et mobilité` %in% input$keyword |
+                 `Urbanisme féministe et queer` %in% input$keyword,
+               #    item_format_2 %in% input$type,
+               Langue %in% input$language,
+               Region %in% input$location,
+               Année >= input$years[1] & Année <= input$years[2])}
+    
+    else if (input$location == "Tous" & input$type != "Tous" ){
       data <- data %>%
         filter(`Tous` %in% input$keyword |
                  `Architecture et design urbain` %in% input$keyword |
