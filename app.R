@@ -520,7 +520,7 @@ ui <- fluidPage(tweaks,
                            fluidRow(
                              column(6, offset = 3,
                                     helpText(p(style="text-align: justify;",
-                                               h4("Cet inventaire (non-exhaustif)de perspectives noires sur le thème de l'urbanisme est à 100 % crowdsourced [créé par des collaborateurs bénévoles] et nous accueillons toutes les suggestions qui correspondent aux critères de la page « Mode d'emploi »."),
+                                               h4("Cet inventaire (non-exhaustif) de perspectives noires sur le thème de l'urbanisme est à 100 % crowdsourced [créé par des collaborateurs bénévoles] et nous accueillons toutes les suggestions qui correspondent aux critères de la page « Mode d'emploi »."),
                                                h4("Si vous souhaitez ajouter une organisation d'urbanistes dirigée par des personnes Noires ou une source médiatique générale (par exemple un blog, un balado, un compte Twitter, une liste de ressources) à la page « Autres ressources », veuillez utiliser ce formulaire:"))))),
                            
                            fluidRow(column(6, offset = 3,  align= "center",
