@@ -446,7 +446,7 @@ ui <- fluidPage(tweaks,
                                                ))),
                                     helpText(p(style="text-align: justify;", 
                                                h4("Si vous souhaitez contribuer à cette liste,  veuillez utiliser notre", 
-                                                  tags$a(href = "https://docs.google.com/forms/d/e/1FAIpQLSdoOvTsbXbaVlFZlkoUM_s3rY6dvebZrXZJn5OMt0YlLa0JQA/viewform", "formulaire pour les ressources supplémentaires"),
+                                                  tags$a(href = "https://docs.google.com/forms/d/e/1FAIpQLSdWRacfCQo-K1MesVJ5vkwSF-6krwKIUBO28YXX0kRfltwtHg/viewform", "formulaire pour les ressources supplémentaires"),
                                                   "ou  envoyez-nous un courriel à",
                                                   
                                                   tags$a(href = "mailto: bvotc.guide@gmail.com", "bvotc.guide@gmail.com."),
