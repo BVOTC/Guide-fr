@@ -1,0 +1,13 @@
+name: Guide-fr
+title: Guide-fr
+username:
+account: bvotc
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2971846
+bundleId: 3800980
+url: https://bvotc.shinyapps.io/Guide-fr/
+when: 1604069536.31085
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .RData|backup-app-fr-10-28.R
