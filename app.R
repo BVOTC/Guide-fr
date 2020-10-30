@@ -46,8 +46,8 @@ data <- data %>% set_names( c("Auteur", "Auteurs additionnels", "Titre", "Année
   mutate(Langue = case_when(Langue == "English" ~ "Anglais",
                             Langue == "French" ~ "Français"  ),
          Format = case_when(Format == "Book - Entire" ~ "Livre - Entier",
-                            Format == "Book - Chapter" ~ "Chapitre du livre
-",
+                            Format == "Book - Chapter" ~ "Chapitre du livre",
+
                             Format == "Journal Article" ~ "Article académique",
                             Format == "Online Material" ~ "Ressource en ligne",
                             Format == "Report" ~ "Rapport",
@@ -66,7 +66,7 @@ data <- data %>% set_names( c("Auteur", "Auteurs additionnels", "Titre", "Année
                           Pays == "England" ~ "Angleterre", 
                           Pays == "Ivory Coast" ~ "Côte d'Ivoire", 
                           Pays == "Multiple countries within one region" ~ "Plusieurs pays dans une région",
-                          Pays == "Multiple countries / Global" ~ "Dans plusieurs pays / global",
+                          Pays == "Multiple countries / Global" ~ "Dans plusieurs pays / Global",
                           TRUE ~ Pays)     ) %>% 
   mutate(across(11:14, ~case_when( 
     . == "Architecture and Urban Design" ~ "Architecture et design urbain",
@@ -111,10 +111,8 @@ data <- data %>% pivot_longer(cols = 11:14,
     
     # Create new Item Format column (remove book redundancy)
     
-    item_format_2 = `Format` %>%
-      replace(`Format` == "Livre - Entier" |
-                `Format` == "Chapitre du livre", 
-              "Livre"),
+    item_format_2 =  case_when(`Format` %in% c("Livre - Entier", "Chapitre du livre") ~  "Livre",
+                TRUE ~ Format),
     
     ##Embed hyperlinks in the item titles
     Titre = if_else(is.na(Link),
