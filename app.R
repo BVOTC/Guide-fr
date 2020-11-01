@@ -185,7 +185,7 @@ ui <- fluidPage(tweaks,
                 includeCSS("www/bootstrap.css"),
                 
                 ## adds logo in browser tab
-                list(tags$head(HTML("<link rel='icon' type='image/gif/png' href='Logo-Dark-Fresno-6.png'>"))),
+                list(tags$head(HTML("<link rel='icon' type='image/gif/png' href='Logo-Round-FR2.png'>"))),
                 
                 navbarPage(
                   windowTitle	= "BVOTC Guide",          ##adds title in browser tab
@@ -198,7 +198,7 @@ ui <- fluidPage(tweaks,
                            
                            fluidRow(
                              column(12, offset = 0, style='padding-left:0px; padding-right:0px; margin-left: -1.1em ; margin-right: -1.1em',
-                                    img(src='MainPageBanner.png', width = '102.2%'))
+                                    img(src='MainPageBanner-FR.png', width = '102.2%'))
                            ),
                            
                            br(), br(),
@@ -298,7 +298,7 @@ ui <- fluidPage(tweaks,
                   
                   tabPanel("Mode d'emploi",
                            br(), br(),
-                           tags$a(href='https://bvotc.shinyapps.io/Guide-fr/',tags$img(src='Logo-Dark-Fresno-6.png', width = "50")),
+                           tags$a(href='https://bvotc.shinyapps.io/Guide-fr/',tags$img(src='Logo-Round-FR.png', width = "50")),
                            
                            fluidRow(
                              column(12, offset = 0, style='padding-left:0px; padding-right:0px; margin-left: -1.1em ; margin-right: -1.1em',
@@ -370,7 +370,7 @@ ui <- fluidPage(tweaks,
                   
                   tabPanel("À propos",
                            br(), br(),
-                           tags$a(href='https://bvotc.shinyapps.io/Guide-fr/',tags$img(src='Logo-Dark-Fresno-6.png', width = "50")),
+                           tags$a(href='https://bvotc.shinyapps.io/Guide-fr/',tags$img(src='Logo-Round-FR.png', width = "50")),
                            fluidRow(
                              column(12, offset = 0, style='padding-left:0px; padding-right:0px; margin-left: -1.1em ; margin-right: -1.1em',
                                     img(src='MainPageBanner-Slimmest.png', width = '102.2%'))
@@ -425,7 +425,7 @@ ui <- fluidPage(tweaks,
                   
                   tabPanel("Autres ressources",
                            br(), br(),
-                           tags$a(href='https://bvotc.shinyapps.io/Guide-fr/',tags$img(src='Logo-Dark-Fresno-6.png', width = "50")),
+                           tags$a(href='https://bvotc.shinyapps.io/Guide-fr/',tags$img(src='Logo-Round-FR.png', width = "50")),
                            fluidRow(
                              column(12, offset = 0, style='padding-left:0px; padding-right:0px; margin-left: -1.1em ; margin-right: -1.1em',
                                     img(src='MainPageBanner-Slimmest.png', width = '102.2%'))
@@ -492,7 +492,7 @@ ui <- fluidPage(tweaks,
                   
                   tabPanel("Contactez-nous",
                            br(), br(),
-                           tags$a(href='https://bvotc.shinyapps.io/Guide/',tags$img(src='Logo-Dark-Fresno-6.png', width = "50")),
+                           tags$a(href='https://bvotc.shinyapps.io/Guide/',tags$img(src='Logo-Round-FR.png', width = "50")),
                            fluidRow(
                              column(12, offset = 0, style='padding-left:0px; padding-right:0px; margin-left: -1.1em ; margin-right: -1.1em',
                                     img(src='MainPageBanner-Slimmest.png', width = '102.2%'))
