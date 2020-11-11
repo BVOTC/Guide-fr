@@ -185,10 +185,10 @@ ui <- fluidPage(tweaks,
                 includeCSS("www/bootstrap.css"),
                 
                 ## adds logo in browser tab
-                list(tags$head(HTML("<link rel='icon' type='image/gif/png' href='Logo-Round-FR2.png'>"))),
+                list(tags$head(HTML("<link rel='icon' type='image/gif/png' href='Logo-Round-FR.png'>"))),
                 
                 navbarPage(
-                  windowTitle	= "BVOTC Guide",          ##adds title in browser tab
+                  windowTitle	= "Voix Noires sur la Ville",          ##adds title in browser tab
                   
                   ##hack to get English/French option in the tabPanel
                   title = tags$script(HTML("var header = $('.navbar > .container-fluid'); header.append('<div style=\"display: block; float:right;padding: 14px 16px;   color: #333;text-decoration: none; font-family: Barlow; font-style: italic; font-weight: 400; font-size: 15px; line-height: 18px;\"> <a href=\"https://bvotc.shinyapps.io/Guide/\"> EN </a> / FR </div>');"  )),
